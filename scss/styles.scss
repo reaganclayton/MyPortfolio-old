@@ -1,0 +1,68 @@
+$gray: #242426;
+$secondary-gray: rgba(26, 26, 26, 0.5);
+$light-gray: #383838;
+$blue: #3A95FF;
+
+@import 'nav';
+@import 'showcase';
+@import 'portfolio';
+@import 'footer';
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: $light-gray;
+}
+
+body, html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding: 0 30px;
+}
+
+.btn {
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #fff;
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 10px;
+    transition: .6s;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: $gray;
+    font-weight: 700;
+}
+
+i { padding-right: 5px }
+
+@media(min-width: 600px) {
+    .container { margin: 0 60px; }
+}
+
+@media(min-width: 768px) {
+    .container { margin: 0 75px; }
+}
+
+@media(min-width: 996px) {
+    .container { margin: 0 90px; }
+}
+
+@media(min-width: 1200px) {
+    .container { margin: 0 105px; }
+}

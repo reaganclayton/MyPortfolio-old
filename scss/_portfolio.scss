@@ -1,0 +1,99 @@
+.portfolio {
+    
+
+    span { color: $blue; }
+
+    &-title {
+        color: #fff;
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 2em;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            padding: 100px 0 10px;
+        }
+
+        p {
+            font-family: 'Raleway';
+            opacity: 75%;
+        }
+    }
+
+    &-projects {
+        display: grid;
+        grid-gap: 50px;
+        margin: 50px 0;
+
+        .project {
+            position: relative;
+            cursor: pointer;
+            background-color: $gray;
+            width: 100%;
+            height: 325px;
+            border: 1px solid rgba(26, 26, 26, 0.5);
+            -webkit-box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.25);
+            box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.25);
+            transition: .3s;
+        }
+
+        .project:hover {
+            box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.25),
+            inset 0px 0px 75px 24px rgba(0,0,0,0.34);
+            img {
+                transform: translate(-50%,-35%) scale(.9);
+            }
+        }
+
+        .bestConnect {
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%,-35%) scale(.8);
+                transition: .2s;
+            }
+        }
+    }
+
+    &-btns {
+        display: flex;
+        padding-bottom: 70px;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 0);
+
+        .code-btn { margin-right: 25px; }
+
+        a { color: #fff; }
+
+        a:hover { color: $gray; }
+    }
+}
+
+@media (min-width: 768px) {
+    .portfolio {
+        
+        &-title {
+            h1 { font-size: 2.25em }
+
+            p { font-size: 1.25em; }
+        }
+
+
+    }
+}
+
+@media (min-width: 996px) {
+    .portfolio {
+
+        &-projects {
+            grid-template-columns: repeat(2, 1fr);
+
+            div { margin: 0; }
+        }
+    }
+}
