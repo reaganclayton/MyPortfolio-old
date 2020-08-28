@@ -1,10 +1,6 @@
 .nav {
     position: absolute;
 
-    svg {
-        width: 100%;
-    }
-
     .logo {
         text-transform: uppercase;
         font-size: 3.5em;
@@ -22,6 +18,31 @@
             font-weight: 300;
             
         }
+    }
+    .logo-lg { display: none; }
+}
+
+@media (min-width: 768px) {
+    .nav {
+        .logo {
+            display: none;
+        }
+        .logo-lg {
+            display: inline;
+            background-repeat: no-repeat;
     
+            img {
+                padding: 25px;
+                width: 250px;
+            }
+        }
+    }
+}
+
+@media (min-width: 996px) {
+    .nav {
+        .logo-lg {
+            img { width: 300px; }
+        }
     }
 }
